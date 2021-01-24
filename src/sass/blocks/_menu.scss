@@ -1,0 +1,141 @@
+.menu {
+    min-height: 75rem;
+    margin-top: 7rem;
+
+    &__title {
+        text-align: center;
+    }
+
+    &__tabs {
+        display: flex;
+        justify-content: center;
+        margin-top: 5rem;
+    }
+
+    &__tab {
+        cursor: pointer;
+        padding: 1.5rem;
+        margin-top: 1rem;
+        margin-right: 5.5rem;
+        transition: border 0.3s ease;
+        border: 1px solid transparent;
+        &:last-child {
+            margin-right: 0;
+        }
+        &:hover {
+            border: 0.1rem solid $text-color;
+        }
+        
+        &_active {
+        border: 0.1rem solid $text-color;
+        }
+    }
+
+    &__section {
+        flex-grow: 1;
+        width: calc(47% - 6rem);
+        margin: 0 3rem;
+        min-width: 50rem;
+        li {
+            padding: 0.5rem;
+        }
+    }
+
+    &__slides {
+        margin-top: 8rem;
+    }
+
+
+    &__position {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    &__course {
+        background-image: radial-gradient(#3c3c3c 1px, #fff 0px);
+        background-size: 0.8rem 0.8rem;
+        background-repeat: repeat-x;
+        background-position: 0% 90%;
+        padding-top: 1rem;
+        width: 95%;
+
+        span {
+            background-color: #fff;
+            padding-right: 0.5rem;
+            color: $text-color;
+        }
+    }
+
+    &__price {
+        text-align: right;
+        width: 5%;
+
+        span {
+            background-color: #fff;
+            padding-left: 0.5rem;
+        }
+    }
+
+    &__desc {
+        background-image: none;
+        font-style: italic;
+        color: $text-color;
+        padding-top: 0;
+        text-align: left;
+    }
+
+    .show {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .hide {
+        display: none;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .menu {
+        &__tabs {
+            flex-wrap: wrap;
+            justify-content: space-between;
+           
+        }
+
+        &__tab {
+            width: 40%;
+            text-align: center;
+            margin-right: 0;
+            &_active {
+                border: 0.1rem solid $text-color;
+            }
+        }
+        &__slide {
+            justify-content: center;
+        }
+
+        &__slides {
+            margin-top: 4rem;
+        }
+
+        &__section {
+            width: 100%;
+            margin: 0;
+            min-width: 26rem;
+            li {
+                width: 97%;
+            }
+        }
+    }
+}
+
+@media(max-width: 480px){
+    .menu {
+        &__tabs {
+            width: 100%;
+        }
+    }
+}
+

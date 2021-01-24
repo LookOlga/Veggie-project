@@ -1,0 +1,142 @@
+.specials {
+    margin-top: 8rem;
+
+    &__title {
+        text-align: center;
+    }
+
+    &__content {
+        margin-top: 6rem;
+        display: flex;
+        flex-flow: row wrap;
+
+    }
+
+    &__img {
+        position: relative;
+        display: flex;
+        width: 50%;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+            filter: opacity(0);
+            box-sizing: inherit;
+            background: rgba(252, 228, 124, 0.4);
+            transition: filter .2s linear;
+        }
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__desc {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        background-color: #f8f8f8;
+        height: auto;
+        padding: 0 1.4rem;
+        width: 50%;
+    }
+
+    &__item {
+        display: flex;
+        width: 33.33333%;
+        cursor: pointer;
+        &:hover>.specials__desc {
+            background-color: $yellow-color;
+        }
+
+        &:hover>.specials__img {
+            filter: saturate(200%);
+
+            &::after {
+                filter: opacity(1);
+            }
+        }
+    }
+
+    &__subtitle {
+        font-size: 1.4rem;
+        &::after {
+            content: '';
+            display: block;
+            width: 7rem;
+            height: 0.1rem;
+            background-color: $text-color;
+            margin: 1rem auto;
+            
+        }
+    }
+
+    &__text {
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+    }
+
+    &__price {
+        font-weight: 700;
+    }
+
+}
+
+
+    @media (max-width: 992px) {
+        .specials {
+            &__item {
+                width: 50%;
+
+                &:nth-child(3) {
+                    flex-direction: row-reverse;
+                }
+
+                &:nth-child(5) {
+                    flex-direction: row-reverse;
+                }
+
+                &:nth-child(6) {
+                    flex-direction: row-reverse;
+                }
+            }
+        }
+
+    }
+
+    @media (max-width: 768px) {
+        .specials {
+            &__item {
+                width: 100%;
+                height: 100%;
+                min-height: 10rem;
+    
+                &:nth-child(2) {
+                    flex-direction: row-reverse;
+                }
+
+                &:nth-child(3) {
+                    flex-direction: row;
+                }
+                &:nth-child(6) {
+                    flex-direction: row;
+                }
+    
+            }
+            &__desc {
+                width: 50%;
+                padding: 0.5rem 0.7rem;
+            }
+    
+            &__img {
+                width: 50%;
+            }
+    
+        }
+    }

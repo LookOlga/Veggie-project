@@ -1,0 +1,67 @@
+.ups {
+    display: flex;
+    align-items: center;
+    background: url('../img/decor/yellow-bg.png');
+    height: 38.5rem;
+
+    &__items {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        width: calc(33.333% - 1.5em);
+        margin-right: 0 1.5rem;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__logo {
+        display: block;
+        margin: 0 auto;
+        width: 6rem;
+        height: 6rem;
+
+    }
+
+    &__subtitle {
+        text-transform: uppercase;
+        font-weight: 700;
+        color: $text-color;
+        text-align: center;
+        margin-top: 4rem;
+    }
+
+    &__desc {
+        color: $text-color;
+        text-align: center;
+        margin-top: 2rem;
+        font-size: 1.6rem;
+        line-height: 1.5;
+        font-weight: 300;
+    }
+}
+
+@media (max-width: 768px) {
+    .ups {
+        min-height: 95rem;
+        padding: 3rem 0 9rem 0;
+        &__subtitle {
+            margin-top: 3rem;
+        }
+
+        &__items {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__item {
+            width: 95%;
+            margin-top: 6rem;
+        }
+    }
+}
+
