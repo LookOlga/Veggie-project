@@ -1,6 +1,4 @@
 .specials {
-    margin-top: 8rem;
-
     &__title {
         text-align: center;
     }
@@ -85,9 +83,7 @@
     &__price {
         font-weight: 700;
     }
-
 }
-
 
     @media (max-width: 992px) {
         .specials {
@@ -107,7 +103,6 @@
                 }
             }
         }
-
     }
 
     @media (max-width: 768px) {
@@ -137,6 +132,5 @@
             &__img {
                 width: 50%;
             }
-    
         }
     }
