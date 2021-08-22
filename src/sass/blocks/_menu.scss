@@ -1,5 +1,7 @@
 .menu {
-    min-height: 75rem;
+    &__container {
+        overflow: hidden;
+    }
     &__title {
         text-align: center;
     }
@@ -29,20 +31,14 @@
         }
     }
 
-    &__section {
-        flex-grow: 1;
-        width: calc(47% - 6rem);
-        margin: 0 3rem;
-        min-width: 50rem;
-        li {
-            padding: 0.5rem;
-        }
-    }
-
     &__slides {
         margin-top: 8rem;
     }
 
+
+    &__section {
+        flex-grow: 1;
+    }
 
     &__position {
         display: flex;
@@ -58,18 +54,19 @@
         width: 95%;
 
         span {
-            background-color: #fff;
             padding-right: 0.5rem;
             color: $text-color;
         }
     }
 
-    &__price {
-        text-align: right;
-        width: 5%;
-
+    &__course, &__price {
         span {
             background-color: #fff;
+        }
+    }
+
+    &__price {
+        span {
             padding-left: 0.5rem;
         }
     }
@@ -92,6 +89,17 @@
         display: none;
     }
 
+}
+
+@media (min-width: 768px) {
+    .menu {
+        &__slide {
+            margin: 0 -1.5rem;
+        }
+        &__section {
+            margin: 0 3rem;
+        }
+    }
 }
 
 @media (max-width: 768px) {
@@ -120,11 +128,7 @@
 
         &__section {
             width: 100%;
-            margin: 0;
             min-width: 26rem;
-            li {
-                width: 97%;
-            }
         }
     }
 }

@@ -44,24 +44,24 @@ a {
     width: 100%;
     max-width: 121rem;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 20px;
 }
 
-section {
-    margin-top: 7rem;
+section, .ups {
+    margin-bottom: 7rem;
 }
 footer{
     margin-top: 13rem;
 }
 
-.ups, .intro {
-    margin-top: 0;
+.intro, .contact {
+    margin-bottom: 0;
 }
  
    
 @media(max-width: 768px) {
     body {
-        font-size: 3.4vw;
+        font-size: 3.3vw;
     }
     
     .container{
